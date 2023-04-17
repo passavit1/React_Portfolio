@@ -1,5 +1,10 @@
 import { About, CareerPath, Contact, Portfolio, Skills } from "../index";
 import { Tabs } from "antd";
+import styled from "styled-components";
+
+const StyledTab = styled(Tabs)`
+  color: red;
+`;
 
 const MainPage = () => {
   const tabs = [
@@ -33,13 +38,13 @@ const MainPage = () => {
   return (
     <>
       <div>
-        <Tabs tabPosition={"left"}>
+        <StyledTab tabPosition={"left"}>
           {tabs.map(({ key, title, content }) => (
             <Tabs.TabPane key={key} tab={title}>
               {content}
             </Tabs.TabPane>
           ))}
-        </Tabs>
+        </StyledTab>
       </div>
     </>
   );
