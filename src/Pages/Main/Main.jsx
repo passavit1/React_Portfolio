@@ -1,38 +1,46 @@
 import { About, CareerPath, Contact, Portfolio, Skills } from "../index";
-import { Radio, Space, Tabs } from "antd";
-import { useState } from "react";
+import { Tabs } from "antd";
 
 const MainPage = () => {
-  const [tabPosition, setTabPosition] = useState("left");
-  const changeTabPosition = (e) => {
-    setTabPosition(e.target.value);
-  };
+  const tabs = [
+    {
+      key: "about",
+      title: "About",
+      content: <About />,
+    },
+    {
+      key: "portfolio",
+      title: "Portfolio",
+      content: <Portfolio />,
+    },
+    {
+      key: "career-path",
+      title: "Career Path",
+      content: <CareerPath />,
+    },
+    {
+      key: "skills",
+      title: "Skills",
+      content: <Skills />,
+    },
+    {
+      key: "contact",
+      title: "Contact",
+      content: <Contact />,
+    },
+  ];
+
   return (
     <>
-      <Space
-        style={{
-          marginBottom: 24,
-        }}
-      >
-        Tab position:
-        <Radio.Group value={tabPosition} onChange={changeTabPosition}>
-          <Radio.Button value="top">top</Radio.Button>
-          <Radio.Button value="bottom">bottom</Radio.Button>
-          <Radio.Button value="left">left</Radio.Button>
-          <Radio.Button value="right">right</Radio.Button>
-        </Radio.Group>
-      </Space>
-      <Tabs
-        tabPosition={tabPosition}
-        items={new Array(3).fill(null).map((_, i) => {
-          const id = String(i + 1);
-          return {
-            label: `Tab ${id}`,
-            key: id,
-            children: `Content of Tab ${id}`,
-          };
-        })}
-      />
+      <div>
+        <Tabs tabPosition={"left"}>
+          {tabs.map(({ key, title, content }) => (
+            <Tabs.TabPane key={key} tab={title}>
+              {content}
+            </Tabs.TabPane>
+          ))}
+        </Tabs>
+      </div>
     </>
   );
 };
