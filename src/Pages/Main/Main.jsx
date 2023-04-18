@@ -30,6 +30,14 @@ const StyledContainer = styled.div`
       border: 1px solid green;
       background-color: #c1cfe8;
     }
+
+    .ant-tabs-content {
+      height: 100%;
+
+      .ant-tabs-tabpane {
+        height: 100%;
+      }
+    }
   }
 `;
 
@@ -37,7 +45,7 @@ const MainPage = () => {
   const tabs = [
     {
       key: "about",
-      title: "About",
+      title: "About Me",
       content: <About />,
     },
     {
