@@ -4,38 +4,52 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   height: 100vh;
-  padding: 10px;
   background-color: #d8dee8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .ant-tabs {
-    height: 100%;
+  .Content {
+    height: 90%;
+    width: 93%;
 
-    .ant-tabs-nav {
-      width: 30%;
+    border: 1px solid red;
+
+    .HeaderName {
+      height: 15%;
     }
 
-    .ant-tabs-tab {
-      height: 20%;
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      border: 1px solid red;
-    }
+    .ant-tabs {
+      height: 85%;
 
-    .ant-tabs-ink-bar {
-      display: none;
-    }
+      .ant-tabs-nav {
+        width: 30%;
+      }
 
-    .ant-tabs-content-holder {
-      border: 1px solid green;
-      background-color: #c1cfe8;
-    }
+      .ant-tabs-tab {
+        height: 16 %;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        border: 1px solid red;
+      }
 
-    .ant-tabs-content {
-      height: 100%;
+      .ant-tabs-ink-bar {
+        display: none;
+      }
 
-      .ant-tabs-tabpane {
+      .ant-tabs-content-holder {
+        border: 1px solid green;
+        background-color: #c1cfe8;
         height: 100%;
+      }
+
+      .ant-tabs-content {
+        height: 100%;
+
+        .ant-tabs-tabpane {
+          height: 100%;
+        }
       }
     }
   }
@@ -73,13 +87,19 @@ const MainPage = () => {
   return (
     <>
       <StyledContainer>
-        <Tabs tabPosition={"left"}>
-          {tabs.map(({ key, title, content }) => (
-            <Tabs.TabPane key={key} tab={title}>
-              {content}
-            </Tabs.TabPane>
-          ))}
-        </Tabs>
+        <div className="Content">
+          <div className="HeaderName">
+            <p>Passavit Maicharoen</p>
+            <p>Full Stack Developer</p>
+          </div>
+          <Tabs tabPosition={"left"}>
+            {tabs.map(({ key, title, content }) => (
+              <Tabs.TabPane key={key} tab={title}>
+                {content}
+              </Tabs.TabPane>
+            ))}
+          </Tabs>
+        </div>
       </StyledContainer>
     </>
   );
