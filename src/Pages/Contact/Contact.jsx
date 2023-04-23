@@ -59,19 +59,7 @@ const Contact = () => {
         >
           <Input />
         </Form.Item>
-        <Form.Item
-          name={["user", "age"]}
-          label="Age"
-          rules={[
-            {
-              type: "number",
-              min: 0,
-              max: 99,
-            },
-          ]}
-        >
-          <InputNumber />
-        </Form.Item>
+
         <Form.Item name={["user", "website"]} label="Website">
           <Input />
         </Form.Item>
