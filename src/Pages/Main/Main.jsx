@@ -13,7 +13,7 @@ const StyledContainer = styled.div`
     height: 90%;
     width: 93%;
 
-    border: 1px solid green;
+    border: 1px solid blue;
 
     .HeaderName {
       height: 15%;
