@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
   .Content {
     height: 90%;
     width: 93%;
-
+    border-radius: 25px;
     border: 1px solid blue;
 
     .HeaderName {
@@ -26,17 +26,27 @@ const StyledContainer = styled.div`
         width: 30%;
       }
 
-      .ant-tabs-tab {
-        height: 16 %;
+      // NavBar
+
+      .ant-tabs-nav-list {
         display: flex;
-        text-align: center;
-        justify-content: center;
-        border: 1px solid red;
+        align-items: center;
+
+        .ant-tabs-tab {
+          height: 16 %;
+          width: 80%;
+          justify-content: center;
+          box-shadow: 9px 7px 4px -1px rgba(0, 0, 0, 0.25);
+          border-radius: 39px;
+          border: 0.2px solid rgba(0, 0, 0, 0.13);
+        }
+
+        .ant-tabs-ink-bar {
+          display: none;
+        }
       }
 
-      .ant-tabs-ink-bar {
-        display: none;
-      }
+      // Content
 
       .ant-tabs-content-holder {
         border: 1px solid green;
