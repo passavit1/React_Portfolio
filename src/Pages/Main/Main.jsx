@@ -49,13 +49,19 @@ const StyledContainer = styled.div`
       // Content
 
       .ant-tabs-content-holder {
-        border: 1px solid green;
-        background-color: #c1cfe8;
         height: 100%;
+        display: flex;
+            justify-content: center;
+}
+
       }
 
       .ant-tabs-content {
-        height: 100%;
+        height: 95%;
+        width: 90%;
+        box-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.25),
+          inset -8px -8px 9px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 44px;
 
         .ant-tabs-tabpane {
           height: 100%;
