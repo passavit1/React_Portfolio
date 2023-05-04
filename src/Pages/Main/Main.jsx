@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   height: 100vh;
-  background-color: #d8dee8;
+  background-color: rgb(29, 29, 32);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,11 +16,29 @@ const StyledContainer = styled.div`
     border: 1px solid blue;
 
     .HeaderName {
-      height: 15%;
+      height: 18%;
+      padding: 1rem;
+
+      p {
+        padding-left: 1.8rem;
+        text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+      }
+
+      p:first-child {
+        color: red;
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+
+      p:last-child {
+        color: blue;
+        font-size: 2rem;
+      }
     }
 
     .ant-tabs {
-      height: 85%;
+      height: 82%;
+      color: rgb(243, 243, 243);
 
       .ant-tabs-nav {
         width: 30%;
@@ -36,7 +54,7 @@ const StyledContainer = styled.div`
           height: 16 %;
           width: 80%;
           justify-content: center;
-          box-shadow: 9px 7px 4px -1px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.25);
           border-radius: 39px;
           border: 0.2px solid rgba(0, 0, 0, 0.13);
         }
@@ -51,17 +69,17 @@ const StyledContainer = styled.div`
       .ant-tabs-content-holder {
         height: 100%;
         display: flex;
-            justify-content: center;
-}
+        justify-content: center;
+        border-left: none;
 
-      }
-
-      .ant-tabs-content {
-        height: 95%;
-        width: 90%;
-        box-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.25),
-          inset -8px -8px 9px 2px rgba(0, 0, 0, 0.25);
-        border-radius: 44px;
+        .ant-tabs-content {
+          height: 95%;
+          width: 90%;
+          box-shadow: inset 1px 1px 12px rgba(0, 0, 0, 0.25),
+            inset -8px -8px 9px 2px rgba(0, 0, 0, 0.25);
+          border-radius: 44px;
+          padding: 2rem;
+        }
 
         .ant-tabs-tabpane {
           height: 100%;
@@ -105,7 +123,7 @@ const MainPage = () => {
       <StyledContainer>
         <div className="Content">
           <div className="HeaderName">
-            <p>Passavit Maicharoen</p>
+            <p>PASSAVIT MAICHAROEN</p>
             <p>Full Stack Developer</p>
           </div>
           <Tabs tabPosition={"left"}>
