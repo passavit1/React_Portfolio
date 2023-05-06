@@ -64,8 +64,6 @@ const StyledContainer = styled.div`
         }
       }
 
-      // Content
-
       .ant-tabs-content-holder {
         height: 100%;
         display: flex;
