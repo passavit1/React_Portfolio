@@ -3,7 +3,7 @@ import { Timeline } from "antd";
 import styled from "styled-components";
 
 const StyledTimeLine = styled(Timeline)`
-  color: red;
+  color: white;
   height: 100%;
   display: flex;
   flex-direction: column;
