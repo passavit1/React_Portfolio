@@ -8,3 +8,7 @@
 *::before {
   box-sizing: inherit;
 }
+
+body {
+  overflow: hidden;
+}
