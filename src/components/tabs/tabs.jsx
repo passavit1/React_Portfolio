@@ -18,8 +18,92 @@ const StyledContainer = styled.div`
   }
 
   .contentContainer {
-    // background-color: red;
     height: 100%;
+  }
+
+  .navItem {
+    text-align: center;
+    margin-left: -1vw;
+    transition: transform 1s ease, background-color 1s ease;
+    width: 80%;
+    border-radius: 20px;
+
+    .navLink {
+      color: white;
+      font-size: 1.3rem;
+
+      &.active {
+        background-color: transparent;
+      }
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    hr {
+      margin: 0;
+      width: 0;
+    }
+
+    &:hover {
+      transform: scale(1.3);
+      background-color: rgb(38, 37, 37);
+
+      hr {
+        border: 1px solid red;
+        width: 100%;
+        transition: 0.4s;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  @media screen and (max-width: 790px) {
+    height: 100vh;
+    width: 100vw;
+
+    .row {
+      flex-direction: column;
+
+      height: 100%;
+      width: 100%;
+      margin: 0;
+
+      .menu {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #nav {
+          flex-direction: row !important;
+          width: 100%;
+
+          div:first-child {
+            width: 0%;
+          }
+
+          div {
+            width: 25%;
+          }
+
+          .navItem {
+            margin: 0;
+
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+
+      .content {
+        height: 80%;
+        width: 100%;
+      }
+    }
   }
 `;
 const TabsPages = ({ welcome, project, skill, work, contract }) => {
@@ -33,56 +117,72 @@ const TabsPages = ({ welcome, project, skill, work, contract }) => {
     <StyledContainer>
       <Tab.Container id="left-tabs-example" activeKey={activeTab}>
         <Row>
-          <Col sm={4}>
+          <Col sm={4} className="menu">
             <Nav
               variant="pills"
               id="nav"
               className="flex-column justify-content-center"
             >
-              <Nav.Item className="">
+              <Nav.Item>
                 <Nav.Link eventKey="welcome" style={{ display: "none" }}>
                   welcome
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item>
+              <Nav.Item className="navItem">
                 <Nav.Link
                   eventKey="skills"
                   onClick={() => handleNavClick("skills")}
+                  className="navLink"
                 >
-                  Skills
+                  <span>
+                    Skills
+                    <hr />
+                  </span>
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item>
+              <Nav.Item className="navItem">
                 <Nav.Link
                   eventKey="projects"
                   onClick={() => handleNavClick("projects")}
+                  className="navLink"
                 >
-                  Projects
+                  <span>
+                    Projects
+                    <hr />
+                  </span>
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item>
+              <Nav.Item className="navItem">
                 <Nav.Link
                   eventKey="exp"
                   onClick={() => {
                     handleNavClick("exp");
                   }}
+                  className="navLink"
                 >
-                  WORK EXPERIENCE
+                  <span>
+                    WORK EXPERIENCE
+                    <hr />
+                  </span>
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item>
+              <Nav.Item className="navItem">
                 <Nav.Link
                   eventKey="contract"
                   onClick={() => {
                     handleNavClick("contract");
                   }}
+                  className="navLink"
                 >
-                  Contract
+                  <span>
+                    Resume & Contract
+                    <hr />
+                  </span>
                 </Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
-          <Col sm={8}>
+          <Col sm={8} className="content">
             <Tab.Content className="contentContainer">
               <Tab.Pane eventKey="welcome">{welcome}</Tab.Pane>
               <Tab.Pane eventKey="skills">{skill}</Tab.Pane>
