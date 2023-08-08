@@ -9,7 +9,6 @@ const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(29, 29, 32);
   position: relative;
 
   animation: color-change-5x 8s linear infinite alternate both;
@@ -31,7 +30,7 @@ const BeforeElement = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
 `;
 
 const AfterElement = styled.div`

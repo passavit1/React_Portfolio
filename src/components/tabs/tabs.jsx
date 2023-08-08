@@ -30,10 +30,17 @@ const StyledContainer = styled.div`
 
     .navLink {
       color: white;
-      font-size: 1.3rem;
+      font-size: 1.5vw;
 
       &.active {
         background-color: transparent;
+
+        hr {
+          border: 1px solid red;
+          width: 100%;
+          transition: 0.4s;
+          opacity: 0.6;
+        }
       }
 
       span {
@@ -59,6 +66,21 @@ const StyledContainer = styled.div`
     }
   }
 
+  @media screen and (max-width: 992px) {
+    .navItem {
+      .navLink {
+        font-size: 1.3vw;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .navItem {
+      .navLink {
+        font-size: 1.5vw;
+      }
+    }
+  }
+
   @media screen and (max-width: 790px) {
     height: 100vh;
     width: 100vw;
@@ -72,7 +94,7 @@ const StyledContainer = styled.div`
 
       .menu {
         width: 100%;
-        height: 20%;
+        height: 15vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -95,6 +117,10 @@ const StyledContainer = styled.div`
             &:hover {
               background-color: transparent;
             }
+
+            .navLink {
+              font-size: 2vw;
+            }
           }
         }
       }
@@ -102,6 +128,14 @@ const StyledContainer = styled.div`
       .content {
         height: 80%;
         width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .navItem {
+      .navLink {
+        font-size: 3vw !important;
       }
     }
   }

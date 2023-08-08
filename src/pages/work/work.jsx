@@ -6,24 +6,93 @@ const StyledContainer = styled.div`
   margin-top: -10vh;
   width: 55vw;
 
+  .container {
+    max-width: unset;
+  }
+
   h2 {
     text-align: center;
     margin-bottom: 3vh;
+    font-size: 3vw;
   }
 
   #cardTitle {
-    font-size: 1.3em;
+    font-size: 1.5vw;
     span {
       margin-left: 1vw;
-      font-size: 1rem;
+      font-size: 1vw;
     }
+  }
+
+  #duration {
+    font-size: 1.2vw;
+  }
+
+  font-size: 1vw;
+
+  @media screen and (max-width: 1000px) {
+    h2 {
+      font-size: 4vw;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    #cardTitle {
+      span {
+        margin: unset;
+      }
+    }
+  }
+
+  @media screen and (max-width: 790px) {
+    margin: unset;
+    width: 100%;
+    display: flex;
+
+    #cardContainer {
+      margin: 0 1vw;
+    }
+
+    #cardTitle {
+      font-size: 3vw;
+      span {
+        margin-left: 1vw;
+        font-size: 2vw;
+      }
+    }
+
+    #duration {
+      font-size: 1.8vw;
+    }
+
+    font-size: 1.8vw;
+  }
+  @media screen and (max-width: 400px) {
+    #cardTitle {
+      font-size: 3vw;
+      span {
+        margin-left: 2vw;
+        font-size: 2vw;
+      }
+    }
+
+    #duration {
+      font-size: 2vw;
+      margin-bottom: -1vh !important;
+    }
+
+    font-size: 2.2vw;
   }
 `;
 
 const ScrollableList = styled(ListGroup)`
   max-height: 70vh;
   overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0.5em;
+  }
 `;
+
 const Work = () => {
   const workExperienceData = [
     {
@@ -74,7 +143,7 @@ const Work = () => {
         <h2>Work Experience</h2>
         <ScrollableList>
           {workExperienceData.map((experience, index) => (
-            <Card key={index} className="mb-3">
+            <Card key={index} className="mb-3" id="cardContainer">
               <Card.Body>
                 <Card.Title id="cardTitle">
                   {experience.company}
@@ -82,7 +151,7 @@ const Work = () => {
                     {experience.jobTitle}
                   </Badge>
                 </Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
+                <Card.Subtitle className="mb-2 text-muted" id="duration">
                   {experience.duration}
                 </Card.Subtitle>
                 <Card.Text>{experience.description}</Card.Text>

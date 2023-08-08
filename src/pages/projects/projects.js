@@ -7,6 +7,7 @@ import TrueThammasat from "../../items/TrueThammasat.png";
 const StyledContainer = styled.div`
   .container {
     display: flex;
+    width: 60vw;
   }
 
   .card {
@@ -16,6 +17,8 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin-right: 3vw;
+    margin-bottom: 3vh;
+    width: 25vw;
 
     border-radius: 7px;
     box-shadow: rgba(255, 255, 255, 0.3) 0 5vw 6vw -8vw,
@@ -92,12 +95,12 @@ const StyledContainer = styled.div`
 
   .text {
     position: absolute;
-    inset: 20px;
+    inset: 1.5vw;
     top: auto;
   }
 
   h2 {
-    font-size: 1.9rem;
+    font-size: 2vw;
     font-size: clamp(20px, 2vw, 40px);
     font-weight: 800;
     margin-bottom: 1em;
@@ -151,15 +154,6 @@ const StyledContainer = styled.div`
     }
   }
 
-  .card {
-    width: 90vw;
-    max-width: 300px;
-
-    @media screen and (min-width: 600px) {
-      width: 40vw;
-    }
-  }
-
   h1 {
     color: #5b6377;
     font-weight: 100;
@@ -188,6 +182,44 @@ const StyledContainer = styled.div`
   body {
     padding: 1em 0 3em;
     min-height: calc(100vh - 4em);
+  }
+
+  @media screen and (max-width: 790px) {
+    .container {
+      width: 100vw;
+      justify-content: center;
+
+      .card {
+        margin: unset;
+        width: 40vw;
+      }
+
+      a:first-child {
+        margin-right: 5vw;
+      }
+    }
+
+  @media screen and (max-width: 600px) {
+    .container {
+      width: 100vw;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      overflow: scroll;
+      padding-bottom : 20vh;
+      
+
+      .card {
+        margin: unset;
+        width: 60vw;
+      }
+
+      a:first-child {
+        margin:unset;
+        margin-bottom : 2vh;
+      }
+    }
   }
 `;
 

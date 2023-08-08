@@ -102,6 +102,17 @@ const StyledContainer = styled.div`
       font-size: 2.5vw;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .center {
+      line-height: 3.5vh;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .center {
+      line-height: 3vh;
+    }
+  }
 `;
 
 const Welcome = () => {
