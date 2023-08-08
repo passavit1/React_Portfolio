@@ -47,6 +47,7 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    font-size: 3.5vw;
 
     h2 {
       font-size: 6vw;
@@ -58,6 +59,7 @@ const StyledSkills = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
+  justify-content: center;
 
   @media screen and (max-width: 1900px) {
     gap: 10rem;

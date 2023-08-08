@@ -14,19 +14,20 @@ const StyledContainer = styled.div`
   h2 {
     text-align: center;
     margin-bottom: 3vh;
+    font-size: 2.5vw;
   }
 
   .content {
     display: flex;
 
     .resume {
-      width: 90%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
 
       img {
-        width: 45%;
+        width: 60%;
         margin-bottom: 2vh;
         border: 2px solid #ddd;
         border-radius: 8px;
@@ -59,21 +60,105 @@ const StyledContainer = styled.div`
       .contact {
         display: flex;
         flex-direction: column;
-        align-items: left;
-        margin-left: -10vw;
+
+        margin-left: -5vw;
 
         gap: 2rem;
 
         a {
           img {
-            width: 4rem;
-            height: 4rem;
+            width: 5vw;
+            height: 5vw;
             transition: transform 0.3s ease;
 
             &:hover {
               transform: scale(1.3);
             }
           }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    h2 {
+      font-size: 2vw;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    h2 {
+      font-size: 3vw;
+    }
+  }
+  @media screen and (max-width: 790px) {
+    margin: unset;
+    height: 80vh;
+    width: 100vw;
+
+    .content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      .resume {
+        width: 90vw;
+
+        a {
+          button {
+            width: 40vw;
+            font-size: 2vw;
+          }
+        }
+      }
+
+      .education {
+        position: absolute;
+        right: 5vw;
+        top: 15vh;
+        .contact {
+          margin: unset;
+
+          a {
+            img {
+              width: 7vw;
+              height: 7vh;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .content {
+      .education {
+        top: 8vh;
+      }
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .content {
+      .education {
+        top: 5vh;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .content {
+      .education {
+        top: 5vh;
+        .contact {
+          gap: 1rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .content {
+      .education {
+        top: 3vh;
+        .contact {
+          gap: 0.5rem;
         }
       }
     }
