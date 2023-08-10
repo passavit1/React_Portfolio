@@ -90,7 +90,7 @@ const StyledSkills = styled.div`
     gap: 4vw;
   }
   @media screen and (max-width: 400px) {
-    gap: 2vw;
+    gap: 1vw;
   }
 `;
 
@@ -149,10 +149,10 @@ const Skill = styled.div`
     }
   }
   @media screen and (max-width: 400px) {
-    transform: scale(0.7);
+    transform: scale(0.4);
 
     &:hover {
-      transform: scale(0.8);
+      transform: scale(0.6);
     }
   }
 `;
