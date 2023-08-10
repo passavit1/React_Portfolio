@@ -27,7 +27,7 @@ const StyledContainer = styled.div`
       align-items: center;
 
       img {
-        width: 55%;
+        width: 50%;
         margin-bottom: 2vh;
         border: 2px solid #ddd;
         border-radius: 8px;
