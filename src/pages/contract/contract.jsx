@@ -27,7 +27,7 @@ const StyledContainer = styled.div`
       align-items: center;
 
       img {
-        width: 60%;
+        width: 55%;
         margin-bottom: 2vh;
         border: 2px solid #ddd;
         border-radius: 8px;
@@ -40,7 +40,7 @@ const StyledContainer = styled.div`
 
         button {
           padding: 0.5rem 1rem;
-          font-size: 1rem;
+          font-size: 1.2vw;
           background-color: #007bff;
           color: white;
           border: none;
@@ -80,14 +80,49 @@ const StyledContainer = styled.div`
     }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1300px) {
     h2 {
-      font-size: 2vw;
+      font-size: 3vw;
+    }
+
+    @media (min-height: 1000px) {
+      .content {
+        .resume {
+          img {
+            width: 70%;
+          }
+
+          a {
+            button {
+              font-size: 1.5vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    @media (min-height: 1300px) {
+      margin-top: -5vh;
     }
   }
   @media screen and (max-width: 1000px) {
     h2 {
       font-size: 3vw;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    @media (min-height: 1000px) {
+      margin-top: -5vh;
+
+      .content {
+        .resume {
+          img {
+            width: 70%;
+          }
+        }
+      }
     }
   }
   @media screen and (max-width: 790px) {
@@ -118,6 +153,8 @@ const StyledContainer = styled.div`
         top: 15vh;
         .contact {
           margin: unset;
+          margin-left: 2vw;
+          margin-top: -2vh;
 
           a {
             img {
@@ -131,9 +168,19 @@ const StyledContainer = styled.div`
   }
 
   @media screen and (max-width: 650px) {
+    h2 {
+      font-size: 4vw;
+    }
     .content {
       .education {
         top: 8vh;
+        right: 3vw;
+      }
+
+      .resume {
+        img {
+          width: 70%;
+        }
       }
     }
   }
@@ -145,11 +192,57 @@ const StyledContainer = styled.div`
     }
   }
   @media screen and (max-width: 500px) {
+    h2 {
+      font-size: 6vw;
+      margin-bottom: 2vh;
+    }
+
     .content {
+      flex-direction: column;
+
+      .resume {
+        height: 100%;
+        width: 100%;
+
+        img {
+          width: 80%;
+        }
+
+        a {
+          button {
+            font-size: 3vw;
+            width: 60vw;
+          }
+        }
+      }
       .education {
-        top: 5vh;
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+
         .contact {
-          gap: 1rem;
+          flex-direction: row;
+          margin: unset;
+          justify-content: center;
+
+          a {
+            img {
+              width: 10vw;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-height: 750px) {
+      h2 {
+        margin-bottom: 8vh;
+      }
+
+      .content {
+        .resume {
+          margin-bottom: 3vh;
         }
       }
     }
@@ -158,9 +251,17 @@ const StyledContainer = styled.div`
     .content {
       .education {
         top: 3vh;
-        .contact {
-          gap: 0.5rem;
-        }
+      }
+    }
+
+    @media (max-height: 900px) {
+      .content {
+        height: auto !important;
+      }
+    }
+    @media (max-height: 800px) {
+      h2 {
+        margin-bottom: 3vh;
       }
     }
   }
@@ -171,7 +272,7 @@ const Contract = () => {
 
   return (
     <StyledContainer>
-      <h2>Education & Contract </h2>
+      <h2>Education & Contact </h2>
       <div className="content">
         <div className="resume">
           <img src={resumeIMG} alt="" />

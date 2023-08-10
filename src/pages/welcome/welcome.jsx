@@ -79,6 +79,39 @@ const StyledContainer = styled.div`
     }
   }
 
+  @media screen and (max-width: 1100px) {
+    @media (min-height: 1300px) {
+      .header {
+        font-size: 5vw;
+      }
+
+      .center {
+        font-size: 1.8vw;
+      }
+
+      .footer {
+        font-size: 1.6vw;
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    @media (min-height: 1000px) {
+      .header {
+        font-size: 5vw;
+        margin-bottom: 2vh;
+      }
+
+      .center {
+        font-size: 1.9vw;
+        line-height: 2vh;
+      }
+
+      .footer {
+        font-size: 1.7vw;
+      }
+    }
+  }
+
   @media screen and (max-width: 790px) {
     align-items: center;
     text-align: center;

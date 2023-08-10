@@ -199,25 +199,49 @@ const StyledContainer = styled.div`
       }
     }
 
-  @media screen and (max-width: 600px) {
-    .container {
-      width: 100vw;
-      height: 100vh;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      overflow: scroll;
-      
-      
+    @media screen and (max-width: 600px) {
+      .container {
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: scroll;
+        padding: unset;
 
-      .card {
-        margin: unset;
-        width: 60vw;
+        .card {
+          margin: unset;
+          width: 60vw;
+        }
+
+        a:first-child {
+          margin: unset;
+          margin-bottom: 2vh;
+        }
+
+        .img2 {
+          margin-top: 2vh;
+        }
       }
 
-      a:first-child {
-        margin:unset;
-        margin-bottom : 2vh;
+      @media (max-height: 750px) {
+        .container {
+          a {
+            .card {
+              width: 30vh;
+            }
+          }
+          .img2 {
+            margin-top: 2vh;
+          }
+        }
+      }
+      @media (max-height: 900px) {
+        .container {
+          .img2 {
+            margin-top: 0vh;
+          }
+        }
       }
     }
   }

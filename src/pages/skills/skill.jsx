@@ -12,7 +12,7 @@ import IconPostgre from "../../items/icon/icons8-postgresql.svg";
 import IconReact from "../../items/icon/icons8-react-native.svg";
 
 const StyledContainer = styled.div`
-  margin-top: -13vh;
+  margin-top: -8vh;
   width: 50vw;
 
   h2 {
@@ -26,23 +26,38 @@ const StyledContainer = styled.div`
     color: white;
   }
 
-  @media screen and (max-width: 1900px) {
+  @media screen and (max-width: 2000px) {
     h2 {
       font-size: 4rem;
     }
   }
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1400px) {
     h2 {
       font-size: 3rem;
     }
   }
-
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1100px) {
+    @media (min-height: 1300px) {
+      margin-top: -3vh;
+      h2 {
+        margin-bottom: 5vh;
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
     h2 {
-      font-size: 2.5rem;
+      font-size: 3.5vw;
     }
   }
 
+  @media screen and (max-width: 900px) {
+    @media (min-height: 1000px) {
+      margin-top: -1vh;
+      h2 {
+        margin-bottom: 4vh;
+      }
+    }
+  }
   @media screen and (max-width: 790px) {
     margin: 0;
     display: flex;
@@ -54,43 +69,47 @@ const StyledContainer = styled.div`
       font-size: 6vw;
     }
   }
+  @media screen and (max-width: 610px) {
+    h2 {
+      font-size: 7vw;
+      margin-bottom: 5vh;
+    }
+  }
 `;
 
 const StyledSkills = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 9rem;
+  gap: 8vw;
   justify-content: center;
 
-  @media screen and (max-width: 1900px) {
-    gap: 10rem;
+  @media screen and (max-width: 2000px) {
+    gap: 7vw;
   }
-
+  @media screen and (max-width: 1440px) {
+    gap: 7vw;
+  }
+  @media screen and (max-width: 1400px) {
+    gap: 6vw;
+  }
   @media screen and (max-width: 1300px) {
-    gap: 6rem;
+    @media (min-height: 1000px) {
+      gap: 7vw;
+    }
+    @media (min-height: 800px) {
+      gap: 5vw;
+    }
+    @media (min-height: 700px) {
+      gap: 4.5vw;
+    }
   }
 
-  @media screen and (max-width: 1200px) {
-    gap: 3rem;
-  }
-  @media screen and (max-width: 1100px) {
-    gap: 6rem;
-  }
-  @media screen and (max-width: 990px) {
-    gap: 4rem;
+  @media screen and (max-width: 1000px) {
+    gap: 3vw;
   }
   @media screen and (max-width: 790px) {
     padding: 0 3vw 0 5vw;
     gap: 10vw;
-  }
-  @media screen and (max-width: 600px) {
-    gap: 8vw;
-  }
-  @media screen and (max-width: 450px) {
-    gap: 4vw;
-  }
-  @media screen and (max-width: 400px) {
-    gap: 1vw;
   }
 `;
 
@@ -99,60 +118,62 @@ const Skill = styled.div`
   align-items: center;
   gap: 0.5rem;
   transition: transform 0.3s ease-in-out;
-  scale: 1.8;
+  transform: scale(2.4);
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(3);
   }
 
-  @media screen and (max-width: 1900px) {
-    transform: scale(1.8);
+  @media screen and (max-width: 2000px) {
+    transform: scale(1.7);
 
     &:hover {
       transform: scale(1.9);
     }
   }
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1600px) {
+    transform: scale(1.6);
+
+    &:hover {
+      transform: scale(1.8);
+    }
+  }
+  @media screen and (max-width: 1440px) {
     transform: scale(1.5);
 
     &:hover {
-      transform: scale(1.6);
+      transform: scale(1.7);
     }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1400px) {
+    transform: scale(1.4);
+
+    &:hover {
+      transform: scale(1.7);
+    }
+  }
+  @media screen and (max-width: 1300px) {
     transform: scale(1.2);
 
     &:hover {
-      transform: scale(1.3);
+      transform: scale(1.4);
     }
-  }
-  @media screen and (max-width: 990px) {
-    transform: scale(1.1);
 
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-  @media screen and (max-width: 690px) {
-    transform: scale(1);
+    @media (max-height: 720px) {
+      transform: scale(1.15);
 
-    &:hover {
-      transform: scale(1.1);
+      &:hover {
+        transform: scale(1.4);
+      }
     }
   }
-  @media screen and (max-width: 450px) {
+
+  @media screen and (max-width: 1100px) {
     transform: scale(0.9);
 
     &:hover {
-      transform: scale(1);
-    }
-  }
-  @media screen and (max-width: 400px) {
-    transform: scale(0.4);
-
-    &:hover {
-      transform: scale(0.6);
+      transform: scale(1.2);
     }
   }
 `;

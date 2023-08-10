@@ -132,7 +132,14 @@ const StyledContainer = styled.div`
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 610px) {
+    .navItem {
+      .navLink {
+        font-size: 2.5vw !important;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
     .navItem {
       .navLink {
         font-size: 3vw !important;
@@ -209,7 +216,7 @@ const TabsPages = ({ welcome, project, skill, work, contract }) => {
                   className="navLink"
                 >
                   <span>
-                    Resume & Contract
+                    Resume & Contact
                     <hr />
                   </span>
                 </Nav.Link>
