@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0448fe53.css",
-    "main.js": "/static/js/main.718b1018.js",
+    "main.js": "/static/js/main.44059bb7.js",
     "static/media/TrueThammasat.png": "/static/media/TrueThammasat.1e148b5cb4bca97b8f5f.png",
     "static/media/CryptoWatcher.png": "/static/media/CryptoWatcher.c67201ac87755ed356cf.png",
     "static/media/resume.png": "/static/media/resume.5d600c4f81effd92f9b0.png",
@@ -21,10 +21,10 @@
     "static/media/facebook.svg": "/static/media/facebook.5e1cb4b86ac3f872dadcbde3ed31cd4b.svg",
     "static/media/icons8-html-5.svg": "/static/media/icons8-html-5.c1bb84e022ca9d76984d4b943bd678fd.svg",
     "main.0448fe53.css.map": "/static/css/main.0448fe53.css.map",
-    "main.718b1018.js.map": "/static/js/main.718b1018.js.map"
+    "main.44059bb7.js.map": "/static/js/main.44059bb7.js.map"
   },
   "entrypoints": [
     "static/css/main.0448fe53.css",
-    "static/js/main.718b1018.js"
+    "static/js/main.44059bb7.js"
   ]
 }
