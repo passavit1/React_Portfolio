@@ -12,12 +12,13 @@ import IconPostgre from "../../items/icon/icons8-postgresql.svg";
 import IconReact from "../../items/icon/icons8-react-native.svg";
 
 const StyledContainer = styled.div`
-  margin-top: -10vh;
-  width: 55vw;
+  margin-top: -13vh;
+  width: 50vw;
 
   h2 {
     text-align: center;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
+    font-size: 4vw;
   }
 
   #cardBody {
@@ -58,7 +59,7 @@ const StyledContainer = styled.div`
 const StyledSkills = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 9rem;
   justify-content: center;
 
   @media screen and (max-width: 1900px) {
@@ -98,6 +99,7 @@ const Skill = styled.div`
   align-items: center;
   gap: 0.5rem;
   transition: transform 0.3s ease-in-out;
+  scale: 1.8;
 
   &:hover {
     transform: scale(1.2);

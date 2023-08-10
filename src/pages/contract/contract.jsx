@@ -93,7 +93,8 @@ const StyledContainer = styled.div`
   @media screen and (max-width: 790px) {
     margin: unset;
     height: 80vh;
-    width: 100vw;
+    width: 95vw;
+    overflow: scroll;
 
     .content {
       position: relative;
